@@ -1,0 +1,5 @@
+services:
+  - type: worker
+    name: moja-godot-server
+    runtime: image
+    dockerfilePath: ./Dockerfile
