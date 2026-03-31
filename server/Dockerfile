@@ -8,9 +8,9 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
-# Kopíruje súbory z ROVNAKÉHO adresára (server/)
-COPY server.pck .
-COPY server.x86_64 .
+# Kopíruje súbory z PODADRESÁRA server (relatívna cesta k build contextu)
+COPY server/server.pck .
+COPY server/server.x86_64 .
 
 RUN chmod +x server.x86_64
 
