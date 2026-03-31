@@ -7,10 +7,12 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
-COPY server.x86_64 .
+
+# Kopíruje súbory z ROVNAKÉHO adresára (server/)
 COPY server.pck .
+COPY server.x86_64 .
 
-RUN chmod +x game_server.x86_64
+RUN chmod +x server.x86_64
 
-# Render nastaví PORT, my ho len prenesieme do argumentov
-CMD ["./game_server.x86_64", "--headless"]
+EXPOSE 8080
+CMD ["./server.x86_64", "--headless"]
