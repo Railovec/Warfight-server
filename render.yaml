@@ -3,6 +3,3 @@ services:
     name: moja-godot-server
     runtime: docker
     dockerfilePath: ./server/Dockerfile
-    envVars:
-      - key: GODOT_HEADLESS
-        value: "true"
