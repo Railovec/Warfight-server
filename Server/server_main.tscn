@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpedphyxefhjh"]
+
+[ext_resource type="Script" uid="uid://c0y6vcw3y68pn" path="res://server_main.gd" id="1_kxqk7"]
+[ext_resource type="Script" uid="uid://b24r1tt8cfasf" path="res://battle_manager.gd" id="2_yeguk"]
+[ext_resource type="Script" uid="uid://dq581ignpnyso" path="res://card_database.gd" id="3_arh0u"]
+
+[node name="Server" type="Node"]
+script = ExtResource("1_kxqk7")
+
+[node name="BattleManager" type="Node" parent="."]
+script = ExtResource("2_yeguk")
+
+[node name="CardDatabase" type="Node" parent="."]
+script = ExtResource("3_arh0u")
