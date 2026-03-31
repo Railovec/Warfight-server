@@ -1,5 +1,8 @@
 services:
-  - type: worker
+  - type: web
     name: moja-godot-server
     runtime: docker
-    dockerfilePath: ./Dockerfile
+    dockerfilePath: ./server/Dockerfile
+    envVars:
+      - key: GODOT_HEADLESS
+        value: "true"
