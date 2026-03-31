@@ -7,8 +7,8 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
-COPY game_server.x86_64 .
-COPY game_server.pck .
+COPY server.x86_64 .
+COPY server.pck .
 
 RUN chmod +x game_server.x86_64
 
