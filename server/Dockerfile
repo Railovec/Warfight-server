@@ -14,5 +14,5 @@ COPY server/server.x86_64 .
 
 RUN chmod +x server.x86_64
 
-EXPOSE 8080
+EXPOSE 9080
 CMD ["./server.x86_64", "--headless"]
